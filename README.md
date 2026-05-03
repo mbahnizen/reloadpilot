@@ -26,15 +26,15 @@ ReloadPilot is a lightweight Firefox extension for scheduling page reloads per U
 ### Current Tab
 
 <p>
-  <img src="docs/images/current-tab-popup.png" alt="ReloadPilot current tab popup" width="320">
-  <img src="docs/images/current-tab-active-popup.png" alt="ReloadPilot active countdown popup" width="320">
+  <img src="docs/images/current-tab-popup.png" alt="ReloadPilot current tab popup" width="320" align="top">
+  <img src="docs/images/current-tab-active-popup.png" alt="ReloadPilot active countdown popup" width="320" align="top">
 </p>
 
 ### Bulk Add & Managed URLs
 
 <p>
-  <img src="docs/images/bulkadd-tab-popup.png" alt="ReloadPilot bulk add popup" width="320">
-  <img src="docs/images/managed-tab-popup.png" alt="ReloadPilot managed URLs popup" width="320">
+  <img src="docs/images/bulkadd-tab-popup.png" alt="ReloadPilot bulk add popup" width="320" align="top">
+  <img src="docs/images/managed-tab-popup.png" alt="ReloadPilot managed URLs popup" width="320" align="top">
 </p>
 
 ### Backup & Restore
