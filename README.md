@@ -100,7 +100,7 @@ specs/            Planning and manual test notes
 
 ## Manual Testing
 
-See `specs/manual_test_checklist.md` for the pre-release checklist.
+See [specs/manual_test_checklist.md](specs/manual_test_checklist.md) for the pre-release checklist.
 
 ## Contributing
 
