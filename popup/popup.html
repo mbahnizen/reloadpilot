@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="brand">
+        <span class="logo-mark" aria-hidden="true">
+          <img src="../icons/ReloadPilot-48px.png" class="logo" alt="">
+        </span>
+        <div>
+          <h1>Reload<span>Pilot</span></h1>
+          <p>by mbahnizen</p>
+        </div>
+      </div>
+      <span id="state-pill" class="state-pill">Idle</span>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="current">Current</button>
+      <button class="tab-btn" data-tab="bulk">Bulk</button>
+      <button class="tab-btn" data-tab="list">Managed</button>
+    </div>
+
+    <main id="tab-current" class="tab-content active">
+      <section class="tab-summary">
+        <p class="label">Current tab</p>
+        <p id="current-domain" class="domain">Loading...</p>
+        <p id="current-url" class="url">Loading...</p>
+      </section>
+
+      <section id="active-status" class="active-status hidden">
+        <div class="status-copy">
+          <span id="countdown-label">Next reload in</span>
+          <strong id="countdown-value">--:--</strong>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div id="countdown-progress" class="progress-fill"></div>
+        </div>
+        <p id="interval-summary" class="status-note">Reloading every 30s</p>
+      </section>
+
+      <section class="control-panel">
+        <div class="input-row">
+          <label for="interval-val">Interval</label>
+          <div class="input-controls">
+            <input type="number" id="interval-val" value="30" min="1">
+            <div class="segmented-control" id="interval-unit">
+              <button class="unit-btn active" data-val="1">Sec</button>
+              <button class="unit-btn" data-val="60">Min</button>
+              <button class="unit-btn" data-val="3600">Hr</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preset-row">
+          <button class="preset-btn current-preset" data-val="15" data-unit="1">15s</button>
+          <button class="preset-btn current-preset" data-val="30" data-unit="1">30s</button>
+          <button class="preset-btn current-preset" data-val="1" data-unit="60">1m</button>
+          <button class="preset-btn current-preset" data-val="5" data-unit="60">5m</button>
+        </div>
+
+        <button id="add-btn" class="primary-btn">Start Reloading</button>
+        <button id="remove-btn" class="danger-btn hidden">Stop Reloading</button>
+      </section>
+    </main>
+
+    <main id="tab-bulk" class="tab-content">
+      <section class="control-panel">
+        <div class="input-row">
+          <label for="bulk-interval-val">Bulk interval</label>
+          <div class="input-controls">
+            <input type="number" id="bulk-interval-val" value="30" min="1">
+            <div class="segmented-control" id="bulk-interval-unit">
+              <button class="unit-btn active" data-val="1">Sec</button>
+              <button class="unit-btn" data-val="60">Min</button>
+              <button class="unit-btn" data-val="3600">Hr</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preset-row">
+          <button class="preset-btn bulk-preset" data-val="15" data-unit="1">15s</button>
+          <button class="preset-btn bulk-preset" data-val="30" data-unit="1">30s</button>
+          <button class="preset-btn bulk-preset" data-val="1" data-unit="60">1m</button>
+          <button class="preset-btn bulk-preset" data-val="5" data-unit="60">5m</button>
+        </div>
+
+        <p class="hint">Paste one full URL per line. Only http:// and https:// links are accepted.</p>
+        <textarea id="bulk-urls" placeholder="https://example.com/..."></textarea>
+        <div id="bulk-feedback" class="bulk-feedback">No URLs entered yet.</div>
+        <button id="bulk-add-btn" class="primary-btn">Add All URLs</button>
+      </section>
+    </main>
+
+    <main id="tab-list" class="tab-content">
+      <section class="managed-toolbar">
+        <div>
+          <p class="label">Global control</p>
+          <p id="managed-global-note" class="toolbar-note">All managed URLs are ready to reload on schedule.</p>
+        </div>
+        <button id="pause-all-btn" class="toolbar-toggle" type="button">Pause All</button>
+      </section>
+      <div id="managed-empty" class="empty-state">No URLs monitored.</div>
+      <div id="managed-list" class="managed-list"></div>
+      <div id="clear-all-container" class="managed-footer hidden">
+        <button id="clear-all-btn" class="subtle-danger-btn" type="button">Clear All URLs</button>
+      </div>
+      <div id="clear-all-warning" class="confirm-panel hidden">
+        <p>Stop reloading every managed URL?</p>
+        <div class="confirm-actions">
+          <button id="cancel-clear-btn" class="secondary-btn compact-btn" type="button">Cancel</button>
+          <button id="confirm-clear-btn" class="danger-btn compact-btn" type="button">Clear All</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>ReloadPilot &copy; <span id="current-year">2026</span></p>
+      <button id="open-options-btn" class="footer-btn" type="button">Open Options</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

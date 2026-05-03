@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ReloadPilot Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <span class="logo-mark" aria-hidden="true">
+        <img src="../icons/ReloadPilot-128px.png" alt="">
+      </span>
+      <div class="hero-copy">
+        <p class="eyebrow">Options</p>
+        <h1>Reload<span>Pilot</span></h1>
+        <p class="lede">Manage local backups, restore schedules, and review what ReloadPilot keeps on this browser.</p>
+        <p class="maker">by mbahnizen</p>
+      </div>
+    </header>
+
+    <section class="panel primary-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Backup</p>
+          <h2>Backup & Restore</h2>
+        </div>
+        <p id="managed-count" class="stat-pill">Loading...</p>
+      </div>
+      <p class="note">Export your managed URL list to a local JSON file, or import a ReloadPilot backup to merge schedules into this browser profile.</p>
+      <div class="tool-row">
+        <button id="export-btn" class="primary-btn">Export JSON</button>
+        <label class="secondary-btn file-btn">
+          Import JSON
+          <input type="file" id="import-file" accept="application/json,.json">
+        </label>
+      </div>
+      <p id="tools-feedback" class="feedback">Exports and imports use a simple JSON file.</p>
+    </section>
+
+    <section class="info-grid">
+      <article class="panel info-card">
+        <p class="eyebrow">Local data</p>
+        <h2>Stored on this browser</h2>
+        <p class="note">ReloadPilot keeps managed URLs, refresh intervals, pause state, and recent interval choices in local extension storage.</p>
+      </article>
+
+      <article class="panel info-card">
+        <p class="eyebrow">Privacy</p>
+        <h2>No remote collection</h2>
+        <p class="note">ReloadPilot does not send your URL list to any server. Export and import happen through files you choose locally.</p>
+      </article>
+    </section>
+
+    <section class="meta-panel">
+      <span>Version <strong id="version">Loading...</strong></span>
+      <span>Built by <strong>mbahnizen</strong></span>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
