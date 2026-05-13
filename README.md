@@ -6,7 +6,7 @@
 
 [![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](CHANGELOG.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Firefox-FF7139.svg)](https://addons.mozilla.org/en-US/firefox/)
+[![Mozilla Add-on](https://img.shields.io/badge/Mozilla_Add--on-Get_Extension-FF7139.svg?logo=firefox&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/reloadpilot-auto-refresh/)
 
 Precision tab reloading for focused workflows.
 
@@ -65,6 +65,12 @@ ReloadPilot requests:
 - `tabs`: read the active tab URL and find tabs that match managed URLs.
 - `scripting`: schedule and clear reload timers in matching tabs.
 - `*://*/*`: allow reload schedules for user-selected HTTP and HTTPS pages.
+
+## Installation
+
+You can download and install ReloadPilot directly from the Mozilla Add-ons store:
+
+👉 **[Download ReloadPilot on Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/reloadpilot-auto-refresh/)**
 
 ## Install for Development
 

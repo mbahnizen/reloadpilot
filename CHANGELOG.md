@@ -8,6 +8,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 
+- Officially published to the [Mozilla Add-ons Store](https://addons.mozilla.org/en-US/firefox/addon/reloadpilot-auto-refresh/).
 - Pause All / Resume All global control.
 - Export managed URLs as a local JSON backup.
 - Import a ReloadPilot JSON backup to merge schedules.
